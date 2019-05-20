@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/*容器*/
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+a {
+  display: block;
+}
+
+.father-bg {
+  position: absolute;
+  top: 0;
+}
+
+.header .logo {
+  float: left;
+  margin-top: 24px;
+  margin-bottom: 23px;
+}
+
+.header .login_register {
+  height: 30px;
+  float: right;
+  margin-top: 35px;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+.header .login_register .learn, .header .login_register .login, .header .login_register .register {
+  display: inline-block;
+  margin-left: 16px;
+}
+
+.header .login_register .login {
+  width: 80px;
+  text-align: center;
+  background-color: #649cf0;
+  border: solid 1px #649cf0;
+  border-radius: 15px;
+  color: #ffffff;
+}
+
+.header .login_register .register {
+  width: 80px;
+  text-align: center;
+  border-radius: 15px;
+  border: solid 1px #649cf0;
+  color: #649cf0;
+}
+
+.index-banner {
+  position: relative;
+}
+
+.index-banner .discount_coupon {
+  height: 500px;
+  position: absolute;
+  top: 0;
+  margin-left: 57px;
+}
+
+.index-banner .discount_coupon .title {
+  font-size: 60px;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: 72px;
+  margin-top: 80px;
+}
+
+.index-banner .discount_coupon .title .italic {
+  font-style: italic;
+}
+
+.index-banner .discount_coupon .title .sum {
+  font-size: 72px;
+  color: #fff17d;
+}
+
+.index-banner .discount_coupon .title .bold {
+  font-weight: bold;
+}
+
+.index-banner .discount_coupon .coupon-item {
+  width: 366px;
+  height: 130px;
+  position: relative;
+  margin-top: 36px;
+  display: inline-block;
+  margin-right: 27px;
+}
