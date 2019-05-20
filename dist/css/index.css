@@ -51,14 +51,14 @@ a {
 }
 
 .index-banner {
-  position: relative;
+  height: 500px;
+  background: url("../images/index_banner.png") no-repeat center;
 }
 
 .index-banner .discount_coupon {
   height: 500px;
-  position: absolute;
-  top: 0;
   margin-left: 57px;
+  float: left;
 }
 
 .index-banner .discount_coupon .title {
@@ -70,15 +70,19 @@ a {
 }
 
 .index-banner .discount_coupon .title .italic {
+  font-family: MicrosoftYaHei;
   font-style: italic;
 }
 
 .index-banner .discount_coupon .title .sum {
+  font-family: MicrosoftYaHei-Bold;
+  font-weight: bold;
   font-size: 72px;
   color: #fff17d;
 }
 
 .index-banner .discount_coupon .title .bold {
+  font-family: MicrosoftYaHei-Bold;
   font-weight: bold;
 }
 
@@ -89,4 +93,114 @@ a {
   margin-top: 36px;
   display: inline-block;
   margin-right: 27px;
+}
+
+.index-banner .discount_coupon .coupon-item .coupon-cont {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  color: #ffffff;
+}
+
+.index-banner .discount_coupon .coupon-item .coupon-cont .cont-sum {
+  width: 125px;
+  height: 91px;
+  margin-top: 19px;
+  border-right: 1px dotted #ffffff;
+  text-align: center;
+  letter-spacing: 0;
+  float: left;
+}
+
+.index-banner .discount_coupon .coupon-item .coupon-cont .cont-sum span {
+  font-size: 30px;
+  line-height: 116px;
+  font-family: MicrosoftYaHei-Bold;
+  font-weight: bold;
+  margin-left: -6px;
+}
+
+.index-banner .discount_coupon .coupon-item .coupon-cont .cont-sum strong {
+  font-size: 60px;
+  font-family: Impact;
+  font-weight: normal;
+  line-height: 91px;
+  margin-left: -6px;
+}
+
+.index-banner .discount_coupon .coupon-item .coupon-cont .cont-detail {
+  width: 193px;
+  height: 91px;
+  float: left;
+  margin-left: 19px;
+  font-size: 16px;
+  margin-top: 19px;
+  letter-spacing: 0;
+}
+
+.index-banner .discount_coupon .coupon-item .coupon-cont .cont-detail strong {
+  padding: 3px 14px 4px 15px;
+  border: 1px solid #ffffff;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.index-banner .discount_coupon .coupon-item .coupon-cont .cont-detail p {
+  line-height: 26px;
+}
+
+.index-banner .discount_coupon .coupon-btn {
+  width: 280px;
+  height: 60px;
+  background-color: #f67617;
+  border-radius: 30px;
+  font-family: MicrosoftYaHei-Bold;
+  font-size: 24px;
+  line-height: 60px;
+  color: #ffffff;
+  text-align: center;
+  margin: 60px auto 0;
+}
+
+.index-banner .applet {
+  width: 170px;
+  height: 220px;
+  background-color: #ffffff;
+  border-radius: 11px;
+  opacity: 0.9;
+  float: right;
+  margin-top: 140px;
+  text-align: center;
+}
+
+.index-banner .applet p {
+  width: 112px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #333333;
+  margin: 16px 28px 16px 30px;
+}
+
+.index-banner .applet img {
+  width: 116px;
+  height: 116px;
+}
+
+/*会员专属*/
+.membership {
+  height: 500px;
+  background-color: #f8f8f8;
+  padding-top: 60px;
+}
+
+.membership .h2 {
+  font-family: MicrosoftYaHei;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 36px;
+  letter-spacing: 0;
+  color: #333333;
 }
