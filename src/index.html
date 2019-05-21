@@ -1,87 +1,807 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>环球网校</title>
-    <!--<link rel="stylesheet" type="text/css" href="https://img.thea.cn/public/css/base.css">-->
-    <link rel="stylesheet" type="text/css" href="css/base.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <!--<script src="https://img.thea.cn/public/js/jquery-1.12.3.min.js"></script>-->
-    <!--<script type="text/javascript" src="https://img.thea.cn/public/js/thea.ms.form.js"></script>-->
+  <meta charset="UTF-8">
+  <title>环球网校</title>
+  <!--<link rel="stylesheet" type="text/css" href="https://img.thea.cn/public/css/base.css">-->
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <!--<script src="https://img.thea.cn/public/js/jquery-1.12.3.min.js"></script>-->
+  <script src="https://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
+  <!--<script type="text/javascript" src="https://img.thea.cn/public/js/thea.ms.form.js"></script>-->
 </head>
 <body>
 
 <div class="header clearfix">
-    <div class="container">
-        <h1 class="logo">
-            <a href="" target="_blank">
-                <img src="images/logo.png" alt="环球网校">
-            </a>
-        </h1>
-        <div class="login_register">
-            <a href="" target="_blank" class="learn">学习中心</a>
-            <a href="" target="_blank" class="login">登录</a>
-            <a href="" target="_blank" class="register">注册</a>
-        </div>
+  <div class="container">
+    <h1 class="logo">
+      <a href="" target="_blank">
+        <img src="images/logo.png" alt="环球网校">
+      </a>
+    </h1>
+    <div class="login_register">
+      <a href="" target="_blank" class="learn">学习中心</a>
+      <a href="" target="_blank" class="login">登录</a>
+      <a href="" target="_blank" class="register">注册</a>
     </div>
+  </div>
 </div>
 
 <div class="index-banner">
-    <!--<img src="images/index_banner.png" alt="环球网校横幅" class="father-bg">-->
-    <div class="container">
-        <div class="discount_coupon">
-            <div class="title">
-                <em class="italic">新人注册领取</em>
-                <span class="sum">150元</span>
-                <span class="bold">优惠券</span>
+  <!--<img src="images/index_banner.png" alt="环球网校横幅" class="father-bg">-->
+  <div class="container">
+    <div class="discount_coupon">
+      <div class="title">
+        <em class="italic">新人注册领取</em>
+        <span class="sum">150元</span>
+        <span class="bold">优惠券</span>
+      </div>
+      <div class="coupon">
+        <div class="coupon-item">
+          <img src="images/coupon.png" alt="优惠券" class="father-bg">
+          <div class="coupon-cont">
+            <div class="cont-sum">
+              <span>￥</span>
+              <strong>50</strong>
             </div>
-            <div class="coupon">
-                <div class="coupon-item">
-                    <img src="images/coupon.png" alt="优惠券" class="father-bg">
-                    <div class="coupon-cont">
-                        <div class="cont-sum">
-                            <span>￥</span>
-                            <strong>50</strong>
-                        </div>
-                        <div class="cont-detail">
-                            <strong>新人专享</strong>
-                            <p>限111元以上课程使用</p>
-                            <p>有效期 : 自领取之日14天内</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="coupon-item">
-                    <img src="images/coupon.png" alt="优惠券" class="father-bg">
-                    <div class="coupon-cont">
-                        <div class="cont-sum">
-                            <span>￥</span>
-                            <strong>100</strong>
-                        </div>
-                        <div class="cont-detail">
-                            <strong>新人专享</strong>
-                            <p>限111元以上课程使用</p>
-                            <p>有效期 : 自领取之日14天内</p>
-                        </div>
-                    </div>
-                </div>
-                <a href="" class="coupon-btn" target="_blank">一键领取</a>
+            <div class="cont-detail">
+              <strong>新人专享</strong>
+              <p>限111元以上课程使用</p>
+              <p>有效期 : 自领取之日14天内</p>
             </div>
+          </div>
         </div>
-        <div class="applet">
-            <p>
-                微信小程序看课
-                扫码即看
-            </p>
-            <img src="images/zhexuewang.png" alt="折学网">
+        <div class="coupon-item">
+          <img src="images/coupon.png" alt="优惠券" class="father-bg">
+          <div class="coupon-cont">
+            <div class="cont-sum">
+              <span>￥</span>
+              <strong>100</strong>
+            </div>
+            <div class="cont-detail">
+              <strong>新人专享</strong>
+              <p>限111元以上课程使用</p>
+              <p>有效期 : 自领取之日14天内</p>
+            </div>
+          </div>
         </div>
+        <a href="" class="coupon-btn" target="_blank">一键领取</a>
+      </div>
     </div>
+    <div class="applet">
+      <p>
+        微信小程序看课
+        扫码即看
+      </p>
+      <img src="images/zhexuewang.png" alt="折学网">
+    </div>
+  </div>
 </div>
 
 <!-- 会员专属 -->
 <div class="membership">
-    <div class="container">
-        <h2 class="h2">会员专属</h2>
+  <div class="container">
+    <h2 class="h2">会员专属</h2>
+
+    <div class="tab-head clearfix">
+      <div class="head-item">一级建造师</div>
+      <div class="head-item">一级建造师</div>
+      <div class="head-item">一级建造师</div>
+      <div class="head-item">一级建造师</div>
+      <div class="head-item">一级建造师</div>
+      <div class="head-item">一级建造师</div>
+      <div class="head-item">一级建造师</div>
     </div>
+
+    <div class="tab-cont clearfix">
+      <div class="cont-item">
+        <div class="item-top">《建设工程经济》真题解析班+题库</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <span class="detail-key">内容：</span>
+            <p class="detail-val">吃透近3年考试真题、掌握考题套路精髓</p>
+          </div>
+
+          <div class="detail-row clearfix">
+            <span class="detail-key">课时：</span>
+            <p class="detail-val">6小时</p>
+          </div>
+
+          <div class="detail-price clearfix">
+            <div class="original">
+              原价：<span>￥1360</span>
+            </div>
+            <div class="current">
+              现价：<span>￥</span><strong>1266</strong>
+            </div>
+          </div>
+        </div>
+        <a href="" target="_blank" class="item-btn">进入选课</a>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">《建设工程经济》真题解析班+题库</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <span class="detail-key">内容：</span>
+            <p class="detail-val">吃透近3年考试真题、掌握考题套路精髓</p>
+          </div>
+
+          <div class="detail-row clearfix">
+            <span class="detail-key">课时：</span>
+            <p class="detail-val">6小时</p>
+          </div>
+
+          <div class="detail-price clearfix">
+            <div class="original">
+              原价：<span>￥1360</span>
+            </div>
+            <div class="current">
+              现价：<span>￥</span><strong>1266</strong>
+            </div>
+          </div>
+        </div>
+        <a href="" target="_blank" class="item-btn">进入选课</a>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">《建设工程经济》真题解析班+题库</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <span class="detail-key">内容：</span>
+            <p class="detail-val">吃透近3年考试真题、掌握考题套路精髓</p>
+          </div>
+
+          <div class="detail-row clearfix">
+            <span class="detail-key">课时：</span>
+            <p class="detail-val">6小时</p>
+          </div>
+
+          <div class="detail-price clearfix">
+            <div class="original">
+              原价：<span>￥1360</span>
+            </div>
+            <div class="current">
+              现价：<span>￥</span><strong>1266</strong>
+            </div>
+          </div>
+        </div>
+        <a href="" target="_blank" class="item-btn">进入选课</a>
+      </div>
+      <div class="cont-item">
+        <img src="images/hot.png" alt="热门" class="hot">
+        <div class="item-top">《建设工程经济》真题解析班+题库</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <span class="detail-key">内容：</span>
+            <p class="detail-val">吃透近3年考试真题、掌握考题套路精髓</p>
+          </div>
+
+          <div class="detail-row clearfix">
+            <span class="detail-key">课时：</span>
+            <p class="detail-val">6小时</p>
+          </div>
+
+          <div class="detail-price clearfix">
+            <div class="original">
+              原价：<span>￥1360</span>
+            </div>
+            <div class="current">
+              现价：<span>￥</span><strong>1266</strong>
+            </div>
+          </div>
+        </div>
+        <a href="" target="_blank" class="item-btn">进入选课</a>
+      </div>
+    </div>
+
+    <div class="ad">
+      <span>
+        更对会员专享优惠，点击咨询在线老师
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- 今日直播 -->
+<div class="live">
+  <div class="container">
+    <h2 class="h2">今日直播</h2>
+
+    <div class="tab-cont clearfix">
+      <div class="cont-item">
+        <div class="item-top">模考点题一视频解析模考点题一视频解析</div>
+        <div class="item-tag">
+          <span>管理</span>
+          <span>免费</span>
+        </div>
+        <div class="item-detail">
+          <div class="detail-time">
+            时间：04月25日 <span>19:00-21:00</span>
+          </div>
+
+          <div class="detail-teacher">
+            <div class="teacher">
+              <img src="images/avatar1.png" alt="头像">
+              <span>张三丰</span>
+            </div>
+            <div class="teacher">
+              <img src="images/avatar2.png" alt="头像">
+              <span>张君</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="appoint clearfix">
+          <div class="text">
+            <strong>15471</strong>人已预约
+          </div>
+
+          <a href="" target="_blank" class="appoint-btn">立即预约</a>
+        </div>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">模考点题一视频解析模考点题一视频解析</div>
+        <div class="item-tag">
+          <span>管理</span>
+          <span>免费</span>
+        </div>
+        <div class="item-detail">
+          <div class="detail-time">
+            时间：04月25日 <span>19:00-21:00</span>
+          </div>
+
+          <div class="detail-teacher">
+            <div class="teacher">
+              <img src="images/avatar1.png" alt="头像">
+              <span>张三丰</span>
+            </div>
+            <div class="teacher">
+              <img src="images/avatar2.png" alt="头像">
+              <span>张君</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="appoint clearfix">
+          <div class="text">
+            <strong>15471</strong>人已预约
+          </div>
+
+          <a href="" target="_blank" class="appoint-btn">立即预约</a>
+        </div>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">模考点题一视频解析模考点题一视频解析</div>
+        <div class="item-tag">
+          <span>管理</span>
+          <span>免费</span>
+        </div>
+        <div class="item-detail">
+          <div class="detail-time">
+            时间：04月25日 <span>19:00-21:00</span>
+          </div>
+
+          <div class="detail-teacher">
+            <div class="teacher">
+              <img src="images/avatar1.png" alt="头像">
+              <span>张三丰</span>
+            </div>
+            <div class="teacher">
+              <img src="images/avatar2.png" alt="头像">
+              <span>张君</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="appoint clearfix">
+          <div class="text">
+            <strong>15471</strong>人已预约
+          </div>
+
+          <a href="" target="_blank" class="appoint-btn">立即预约</a>
+        </div>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">模考点题一视频解析模考点题一视频解析</div>
+        <div class="item-tag">
+          <span>管理</span>
+          <span>免费</span>
+        </div>
+        <div class="item-detail">
+          <div class="detail-time">
+            时间：04月25日 <span>19:00-21:00</span>
+          </div>
+
+          <div class="detail-teacher">
+            <div class="teacher">
+              <img src="images/avatar1.png" alt="头像">
+              <span>张三丰</span>
+            </div>
+            <div class="teacher">
+              <img src="images/avatar2.png" alt="头像">
+              <span>张君</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="appoint clearfix">
+          <div class="text">
+            <strong>15471</strong>人已预约
+          </div>
+
+          <a href="" target="_blank" class="appoint-btn">立即预约</a>
+        </div>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">模考点题一视频解析模考点题一视频解析</div>
+        <div class="item-tag">
+          <span>管理</span>
+          <span>免费</span>
+        </div>
+        <div class="item-detail">
+          <div class="detail-time">
+            时间：04月25日 <span>19:00-21:00</span>
+          </div>
+
+          <div class="detail-teacher">
+            <div class="teacher">
+              <img src="images/avatar1.png" alt="头像">
+              <span>张三丰</span>
+            </div>
+            <div class="teacher">
+              <img src="images/avatar2.png" alt="头像">
+              <span>张君</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="appoint clearfix">
+          <div class="text">
+            <strong>15471</strong>人已预约
+          </div>
+
+          <a href="" target="_blank" class="appoint-btn">立即预约</a>
+        </div>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">模考点题一视频解析模考点题一视频解析</div>
+        <div class="item-tag">
+          <span>管理</span>
+          <span>免费</span>
+        </div>
+        <div class="item-detail">
+          <div class="detail-time">
+            时间：04月25日 <span>19:00-21:00</span>
+          </div>
+
+          <div class="detail-teacher">
+            <div class="teacher">
+              <img src="images/avatar1.png" alt="头像">
+              <span>张三丰</span>
+            </div>
+            <div class="teacher">
+              <img src="images/avatar2.png" alt="头像">
+              <span>张君</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="appoint clearfix">
+          <div class="text">
+            <strong>15471</strong>人已预约
+          </div>
+
+          <a href="" target="_blank" class="appoint-btn">立即预约</a>
+        </div>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">模考点题一视频解析模考点题一视频解析</div>
+        <div class="item-tag">
+          <span>管理</span>
+          <span>免费</span>
+        </div>
+        <div class="item-detail">
+          <div class="detail-time">
+            时间：04月25日 <span>19:00-21:00</span>
+          </div>
+
+          <div class="detail-teacher">
+            <div class="teacher">
+              <img src="images/avatar1.png" alt="头像">
+              <span>张三丰</span>
+            </div>
+            <div class="teacher">
+              <img src="images/avatar2.png" alt="头像">
+              <span>张君</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="appoint clearfix">
+          <div class="text">
+            <strong>15471</strong>人已预约
+          </div>
+
+          <a href="" target="_blank" class="appoint-btn">立即预约</a>
+        </div>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">模考点题一视频解析模考点题一视频解析</div>
+        <div class="item-tag">
+          <span>管理</span>
+          <span>免费</span>
+        </div>
+        <div class="item-detail">
+          <div class="detail-time">
+            时间：04月25日 <span>19:00-21:00</span>
+          </div>
+
+          <div class="detail-teacher">
+            <div class="teacher">
+              <img src="images/avatar1.png" alt="头像">
+              <span>张三丰</span>
+            </div>
+            <div class="teacher">
+              <img src="images/avatar2.png" alt="头像">
+              <span>张君</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="appoint clearfix">
+          <div class="text">
+            <strong>15471</strong>人已预约
+          </div>
+
+          <a href="" target="_blank" class="appoint-btn">立即预约</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- 题库 -->
+<div class="exercise">
+  <div class="container">
+    <div class="ad">
+      <!--<div class="QRcode">
+        <img src="" alt="二维码">
+        <div class="text">微信扫一扫刷题</div>
+      </div>-->
+    </div>
+
+    <div class="sort clearfix">
+      <h2 class="h2">会员专属</h2>
+      <div class="cont-item">
+        <div class="item-top">一级建造师</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <img src="images/icon1.png" alt="章节题数">
+            <p>章节题数： <strong>6370</strong> 道</p>
+          </div>
+          <div class="detail-row clearfix">
+            <img src="images/icon2.png" alt="试卷数量">
+            <p>试卷数量： <strong>81</strong> 套</p>
+          </div>
+
+
+        </div>
+
+        <a href="" target="_blank" class="appoint-btn">进入做题</a>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">一级建造师</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <img src="images/icon1.png" alt="章节题数">
+            <p>章节题数： <strong>6370</strong> 道</p>
+          </div>
+          <div class="detail-row clearfix">
+            <img src="images/icon2.png" alt="试卷数量">
+            <p>试卷数量： <strong>81</strong> 套</p>
+          </div>
+
+
+        </div>
+
+        <a href="" target="_blank" class="appoint-btn">进入做题</a>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">一级建造师</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <img src="images/icon1.png" alt="章节题数">
+            <p>章节题数： <strong>6370</strong> 道</p>
+          </div>
+          <div class="detail-row clearfix">
+            <img src="images/icon2.png" alt="试卷数量">
+            <p>试卷数量： <strong>81</strong> 套</p>
+          </div>
+
+
+        </div>
+
+        <a href="" target="_blank" class="appoint-btn">进入做题</a>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">一级建造师</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <img src="images/icon1.png" alt="章节题数">
+            <p>章节题数： <strong>6370</strong> 道</p>
+          </div>
+          <div class="detail-row clearfix">
+            <img src="images/icon2.png" alt="试卷数量">
+            <p>试卷数量： <strong>81</strong> 套</p>
+          </div>
+
+
+        </div>
+
+        <a href="" target="_blank" class="appoint-btn">进入做题</a>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">一级建造师</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <img src="images/icon1.png" alt="章节题数">
+            <p>章节题数： <strong>6370</strong> 道</p>
+          </div>
+          <div class="detail-row clearfix">
+            <img src="images/icon2.png" alt="试卷数量">
+            <p>试卷数量： <strong>81</strong> 套</p>
+          </div>
+
+
+        </div>
+
+        <a href="" target="_blank" class="appoint-btn">进入做题</a>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">一级建造师</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <img src="images/icon1.png" alt="章节题数">
+            <p>章节题数： <strong>6370</strong> 道</p>
+          </div>
+          <div class="detail-row clearfix">
+            <img src="images/icon2.png" alt="试卷数量">
+            <p>试卷数量： <strong>81</strong> 套</p>
+          </div>
+
+
+        </div>
+
+        <a href="" target="_blank" class="appoint-btn">进入做题</a>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">一级建造师</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <img src="images/icon1.png" alt="章节题数">
+            <p>章节题数： <strong>6370</strong> 道</p>
+          </div>
+          <div class="detail-row clearfix">
+            <img src="images/icon2.png" alt="试卷数量">
+            <p>试卷数量： <strong>81</strong> 套</p>
+          </div>
+
+
+        </div>
+
+        <a href="" target="_blank" class="appoint-btn">进入做题</a>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">一级建造师</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <img src="images/icon1.png" alt="章节题数">
+            <p>章节题数： <strong>6370</strong> 道</p>
+          </div>
+          <div class="detail-row clearfix">
+            <img src="images/icon2.png" alt="试卷数量">
+            <p>试卷数量： <strong>81</strong> 套</p>
+          </div>
+
+
+        </div>
+
+        <a href="" target="_blank" class="appoint-btn">进入做题</a>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">一级建造师</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <img src="images/icon1.png" alt="章节题数">
+            <p>章节题数： <strong>6370</strong> 道</p>
+          </div>
+          <div class="detail-row clearfix">
+            <img src="images/icon2.png" alt="试卷数量">
+            <p>试卷数量： <strong>81</strong> 套</p>
+          </div>
+
+
+        </div>
+
+        <a href="" target="_blank" class="appoint-btn">进入做题</a>
+      </div>
+    </div>
+    <div class="sort clearfix">
+      <h2 class="h2">会计类</h2>
+      <div class="cont-item">
+        <div class="item-top">初级经济师</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <img src="images/icon1.png" alt="章节题数">
+            <p>章节题数： <strong>6370</strong> 道</p>
+          </div>
+          <div class="detail-row clearfix">
+            <img src="images/icon2.png" alt="试卷数量">
+            <p>试卷数量： <strong>81</strong> 套</p>
+          </div>
+
+
+        </div>
+
+        <a href="" target="_blank" class="appoint-btn">进入做题</a>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">中级经济师</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <img src="images/icon1.png" alt="章节题数">
+            <p>章节题数： <strong>6370</strong> 道</p>
+          </div>
+          <div class="detail-row clearfix">
+            <img src="images/icon2.png" alt="试卷数量">
+            <p>试卷数量： <strong>81</strong> 套</p>
+          </div>
+
+
+        </div>
+
+        <a href="" target="_blank" class="appoint-btn">进入做题</a>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">银行从业</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <img src="images/icon1.png" alt="章节题数">
+            <p>章节题数： <strong>6370</strong> 道</p>
+          </div>
+          <div class="detail-row clearfix">
+            <img src="images/icon2.png" alt="试卷数量">
+            <p>试卷数量： <strong>81</strong> 套</p>
+          </div>
+
+
+        </div>
+
+        <a href="" target="_blank" class="appoint-btn">进入做题</a>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">一级建造师</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <img src="images/icon1.png" alt="章节题数">
+            <p>章节题数： <strong>6370</strong> 道</p>
+          </div>
+          <div class="detail-row clearfix">
+            <img src="images/icon2.png" alt="试卷数量">
+            <p>试卷数量： <strong>81</strong> 套</p>
+          </div>
+
+
+        </div>
+
+        <a href="" target="_blank" class="appoint-btn">进入做题</a>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">一级建造师</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <img src="images/icon1.png" alt="章节题数">
+            <p>章节题数： <strong>6370</strong> 道</p>
+          </div>
+          <div class="detail-row clearfix">
+            <img src="images/icon2.png" alt="试卷数量">
+            <p>试卷数量： <strong>81</strong> 套</p>
+          </div>
+
+
+        </div>
+
+        <a href="" target="_blank" class="appoint-btn">进入做题</a>
+      </div>
+    </div>
+    <div class="sort clearfix">
+      <h2 class="h2">职业类</h2>
+      <div class="cont-item">
+        <div class="item-top">人力资源师</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <img src="images/icon1.png" alt="章节题数">
+            <p>章节题数： <strong>6370</strong> 道</p>
+          </div>
+          <div class="detail-row clearfix">
+            <img src="images/icon2.png" alt="试卷数量">
+            <p>试卷数量： <strong>81</strong> 套</p>
+          </div>
+
+
+        </div>
+
+        <a href="" target="_blank" class="appoint-btn">进入做题</a>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">社会工作者</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <img src="images/icon1.png" alt="章节题数">
+            <p>章节题数： <strong>6370</strong> 道</p>
+          </div>
+          <div class="detail-row clearfix">
+            <img src="images/icon2.png" alt="试卷数量">
+            <p>试卷数量： <strong>81</strong> 套</p>
+          </div>
+
+
+        </div>
+
+        <a href="" target="_blank" class="appoint-btn">进入做题</a>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">教师资格</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <img src="images/icon1.png" alt="章节题数">
+            <p>章节题数： <strong>6370</strong> 道</p>
+          </div>
+          <div class="detail-row clearfix">
+            <img src="images/icon2.png" alt="试卷数量">
+            <p>试卷数量： <strong>81</strong> 套</p>
+          </div>
+
+
+        </div>
+
+        <a href="" target="_blank" class="appoint-btn">进入做题</a>
+      </div>
+      <div class="cont-item">
+        <div class="item-top">软考职称</div>
+        <div class="item-detail">
+          <div class="detail-row clearfix">
+            <img src="images/icon1.png" alt="章节题数">
+            <p>章节题数： <strong>6370</strong> 道</p>
+          </div>
+          <div class="detail-row clearfix">
+            <img src="images/icon2.png" alt="试卷数量">
+            <p>试卷数量： <strong>81</strong> 套</p>
+          </div>
+
+
+        </div>
+
+        <a href="" target="_blank" class="appoint-btn">进入做题</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p class="link">
+    <a href="" target="_blank">网校排名</a>|
+    <a href="" target="_blank">名师</a>|
+    <a href="" target="_blank">专题</a>|
+    <a href="" target="_blank">问答</a>|
+    <a href="" target="_blank">资讯</a>|
+    <a href="" target="_blank">文章</a>
+  </p>
+  <p class="address">
+    版权所有  深圳市诺达教育股份有限公司 © www.thea.cn All Rights Reserved  粤ICP备10032899号
+  </p>
 </div>
 </body>
+<script type="text/javascript" src="js/index.js"></script>
 </html>
