@@ -13,12 +13,19 @@ li {
   list-style-type: none;
 }
 
-.father-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
+.hover-effect, .footer .link a, .index-banner .discount_coupon .coupon-btn, .koolearn-membership .member .tab-cont .cont-item .item-btn, .koolearn-membership .member .tab-cont2 .big .item-btn, .koolearn-membership .consult, .chinaan-banner .chinaan_member .coupon-item .coupon-cont .get, .good-lesson .lesson-cont .cont-col.middle .dry-cargo .exam .types .download {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
+.hover-effect:hover, .footer .link a:hover, .index-banner .discount_coupon .coupon-btn:hover, .koolearn-membership .member .tab-cont .cont-item .item-btn:hover, .koolearn-membership .member .tab-cont2 .big .item-btn:hover, .koolearn-membership .consult:hover, .chinaan-banner .chinaan_member .coupon-item .coupon-cont .get:hover, .good-lesson .lesson-cont .cont-col.middle .dry-cargo .exam .types .download:hover {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+/*common style*/
 .header .logo {
   float: left;
   margin-top: 24px;
@@ -55,6 +62,81 @@ li {
   color: #649cf0;
 }
 
+.header .login_register .register:hover {
+  background-color: #649cf0;
+  border: solid 1px #649cf0;
+  color: #ffffff;
+}
+
+.h2 {
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0;
+  color: #333333;
+  margin-bottom: 28px;
+}
+
+.footer {
+  padding: 29px 0 26px;
+  background-color: #333333;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer .link {
+  color: #5a5a5a;
+  margin-bottom: 8px;
+}
+
+.footer .link a {
+  color: #ffffff;
+  display: inline-block;
+  padding: 0 8px;
+}
+
+.footer .address {
+  color: #fafafa;
+  opacity: 0.4;
+}
+
+.school-module .tab-cont {
+  margin-right: -20px;
+}
+
+.school-module .tab-cont .cont-item {
+  padding: 16px 20px 20px;
+  background-color: #ffffff;
+  float: left;
+  margin-right: 20px;
+}
+
+.school-module .tab-cont .cont-item .item-top {
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.school-module .tab-cont .cont-item .item-top:hover {
+  color: #f15656;
+}
+
+.school-module .tab-cont .cont-item .item-detail {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #888888;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 10px;
+}
+
+.school-module .tab-cont .cont-item:hover {
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+/*环球网校*/
 .index-banner {
   height: 500px;
   background: url("../images/index_banner.png") no-repeat center;
@@ -75,7 +157,6 @@ li {
 }
 
 .index-banner .discount_coupon .title .italic {
-  font-family: MicrosoftYaHei;
   font-style: italic;
 }
 
@@ -100,6 +181,12 @@ li {
   margin-right: 27px;
 }
 
+.index-banner .discount_coupon .coupon-item .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .index-banner .discount_coupon .coupon-item .coupon-cont {
   width: 100%;
   height: 100%;
@@ -112,7 +199,6 @@ li {
   width: 125px;
   height: 91px;
   margin-top: 19px;
-  border-right: 1px dotted #ffffff;
   text-align: center;
   letter-spacing: 0;
   float: left;
@@ -209,7 +295,6 @@ li {
   width: 138px;
   height: 42px;
   border: solid 1px #bbbbbb;
-  font-family: MicrosoftYaHei;
   font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
@@ -222,22 +307,22 @@ li {
   cursor: pointer;
 }
 
-.membership .tab-head .head-item:hover {
+.membership .tab-head .head-item.active, .membership .tab-head .head-item:hover {
   background-color: #f15656;
   border: 1px solid #f15656;
   color: #ffffff;
 }
 
 .membership .tab-cont {
-  margin-right: -20px;
+  display: none;
+}
+
+.membership .tab-cont.active {
+  display: block;
 }
 
 .membership .tab-cont .cont-item {
   width: 220px;
-  padding: 16px 20px 20px;
-  background-color: #ffffff;
-  float: left;
-  margin-right: 20px;
   position: relative;
 }
 
@@ -245,23 +330,6 @@ li {
   position: absolute;
   top: 0;
   right: 0;
-}
-
-.membership .tab-cont .cont-item .item-top {
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0;
-  color: #000000;
-  margin-bottom: 12px;
-}
-
-.membership .tab-cont .cont-item .item-detail {
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0;
-  color: #888888;
-  border-bottom: 1px solid #dddddd;
-  padding-bottom: 10px;
 }
 
 .membership .tab-cont .cont-item .item-detail .detail-key {
@@ -316,11 +384,6 @@ li {
   color: #ffffff;
 }
 
-.membership .tab-cont .cont-item:hover {
-  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-}
-
 .membership .ad {
   height: 100px;
   font-size: 26px;
@@ -342,26 +405,10 @@ li {
   padding-bottom: 17px;
 }
 
-.live .tab-cont {
-  margin-right: -20px;
-}
-
 .live .tab-cont .cont-item {
-  background-color: #ffffff;
   border: solid 1px #dddddd;
   width: 218px;
-  padding: 16px 20px 20px;
-  float: left;
-  margin-right: 20px;
   margin-bottom: 20px;
-}
-
-.live .tab-cont .cont-item .item-top {
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0;
-  color: #000000;
-  margin-bottom: 12px;
 }
 
 .live .tab-cont .cont-item .item-tag {
@@ -378,15 +425,6 @@ li {
   text-align: center;
   margin-right: 12px;
   color: #666666;
-}
-
-.live .tab-cont .cont-item .item-detail {
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0;
-  color: #888888;
-  border-bottom: 1px solid #dddddd;
-  padding-bottom: 10px;
 }
 
 .live .tab-cont .cont-item .item-detail .detail-time {
@@ -439,11 +477,6 @@ li {
   background-color: #dddddd;
   border: 1px solid #dddddd;
   color: #666666;
-}
-
-.live .tab-cont .cont-item:hover {
-  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 
 /*题库*/
@@ -508,6 +541,10 @@ li {
   border-bottom: 1px solid #dddddd;
 }
 
+.exercise .sort .cont-item .item-top:hover {
+  color: #f15656;
+}
+
 .exercise .sort .cont-item .item-detail {
   font-size: 14px;
   line-height: 24px;
@@ -556,38 +593,7 @@ li {
           box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 
-.footer {
-  padding: 29px 0 26px;
-  background-color: #333333;
-  text-align: center;
-  font-size: 14px;
-}
-
-.footer .link {
-  color: #5a5a5a;
-  margin-bottom: 8px;
-}
-
-.footer .link a {
-  color: #ffffff;
-  display: inline-block;
-  padding: 0 8px;
-}
-
-.footer .address {
-  color: #fafafa;
-  opacity: 0.4;
-}
-
-/*common style*/
-.h2 {
-  font-size: 24px;
-  line-height: 36px;
-  letter-spacing: 0;
-  color: #333333;
-  margin-bottom: 28px;
-}
-
+/*新东方在线*/
 /*会员专属*/
 .koolearn-membership {
   background-color: #f8f8f8;
@@ -630,7 +636,7 @@ li {
   cursor: pointer;
 }
 
-.koolearn-membership .member .tab-head .head-item:hover {
+.koolearn-membership .member .tab-head .head-item.active, .koolearn-membership .member .tab-head .head-item:hover {
   background-color: #649cf0;
   border: 1px solid #649cf0;
   color: #ffffff;
@@ -639,6 +645,11 @@ li {
 .koolearn-membership .member .tab-cont {
   padding: 20px 8px 20px 20px;
   background-color: #649cf0;
+  display: none;
+}
+
+.koolearn-membership .member .tab-cont.active {
+  display: block;
 }
 
 .koolearn-membership .member .tab-cont .cont-item {
@@ -815,8 +826,7 @@ li {
   margin-top: -8px;
 }
 
-.koolearn-membership .consult a {
-  display: inline-block;
+.koolearn-membership .consult span {
   font-size: 16px;
   color: #ffffff;
   margin-left: 10px;
@@ -831,8 +841,8 @@ li {
   height: 283px;
   padding-top: 20px;
   background-color: #ffffff;
-  -webkit-box-shadow: 8px 13px 25px 0px rgba(102, 102, 102, 0.14);
-          box-shadow: 8px 13px 25px 0px rgba(102, 102, 102, 0.14);
+  -webkit-box-shadow: 8px 13px 25px 0 rgba(102, 102, 102, 0.14);
+          box-shadow: 8px 13px 25px 0 rgba(102, 102, 102, 0.14);
   margin-top: 193px;
   margin-bottom: 61px;
 }
@@ -863,17 +873,27 @@ li {
   color: #666666;
 }
 
+/*中华会计网*/
 .chinaan-banner {
-  height: 2648px;
-  background: url("../images/chinaan_banner1.png") no-repeat top center;
-  padding-top: 600px;
+  background: url("../images/chinaan_banner1.png") no-repeat top center #bd141c;
+  padding-top: 500px;
+  padding-bottom: 60px;
+}
+
+.chinaan-banner .chinaan_member {
+  margin-top: 84px;
 }
 
 .chinaan-banner .chinaan_member .h2 {
-  font-size: 36px;
-  color: #ffffff;
   text-align: center;
+  font-size: 36px;
+  line-height: 61px;
   font-weight: bold;
+  color: #ffffff;
+}
+
+.chinaan-banner .chinaan_member .h2 img {
+  vertical-align: middle;
 }
 
 .chinaan-banner .chinaan_member .coupon-item {
@@ -881,6 +901,12 @@ li {
   height: 140px;
   position: relative;
   margin: 0 auto;
+}
+
+.chinaan-banner .chinaan_member .coupon-item .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .chinaan-banner .chinaan_member .coupon-item .coupon-cont {
@@ -904,6 +930,7 @@ li {
   letter-spacing: 0;
   float: left;
   line-height: 122px;
+  padding-left: 10px;
 }
 
 .chinaan-banner .chinaan_member .coupon-item .coupon-cont .cont-sum span {
@@ -916,13 +943,14 @@ li {
   font-size: 60px;
   font-family: Impact;
   font-weight: normal;
+  margin-left: -4px;
 }
 
 .chinaan-banner .chinaan_member .coupon-item .coupon-cont .cont-detail {
   font-size: 26px;
-  letter-spacing: 2px;
   line-height: 122px;
-  margin-left: 29px;
+  float: right;
+  padding-right: 18px;
   color: #ff4b02;
 }
 
@@ -931,16 +959,7 @@ li {
   height: 120px;
   float: right;
   margin-left: 20px;
-}
-
-.chinaan-banner .chinaan_member .h2 {
-  text-align: center;
-  font-size: 34px;
-  line-height: 61px;
-}
-
-.chinaan-banner .chinaan_member .h2 img {
-  vertical-align: middle;
+  display: block;
 }
 
 .chinaan-banner .chinaan_member .tab-head {
@@ -963,9 +982,33 @@ li {
   cursor: pointer;
 }
 
+.chinaan-banner .chinaan_member .tab-head .head-item.active {
+  background-color: #fba807;
+  color: #ffffff;
+  position: relative;
+}
+
+.chinaan-banner .chinaan_member .tab-head .head-item.active span {
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #fba807;
+}
+
 .chinaan-banner .chinaan_member .tab-cont {
   padding: 20px 8px 20px 20px;
   background-color: #ffffff;
+  display: none;
+}
+
+.chinaan-banner .chinaan_member .tab-cont.active {
+  display: block;
 }
 
 .chinaan-banner .chinaan_member .tab-cont .cont-item {
@@ -978,152 +1021,259 @@ li {
 }
 
 .chinaan-banner .chinaan_member .tab-cont .cont-item .item-detail {
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0;
-  color: #888888;
-  padding-top: 10px;
-}
-
-.chinaan-banner .chinaan_member .tab-cont .cont-item .item-detail .detail-row {
-  color: #333333;
-  padding-left: 3px;
-  width: 210px;
-}
-
-.chinaan-banner .chinaan_member .tab-cont .cont-item .item-detail .detail-price .original {
-  line-height: 30px;
-  color: #888888;
-  text-decoration: line-through;
-}
-
-.chinaan-banner .chinaan_member .tab-cont .cont-item .current {
-  float: left;
-  font-family: MicrosoftYaHei-Bold;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 1px;
-  color: #ec5148;
-}
-
-.chinaan-banner .chinaan_member .tab-cont .cont-item .item-btn {
-  width: 76px;
-  height: 28px;
-  text-align: center;
-  line-height: 28px;
-  color: #ffffff;
-  background-color: #ec5148;
-  border-radius: 2px;
-  float: right;
-}
-
-.chinaan-banner .chinaan_member .tab-cont .cont-item:hover {
-  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-}
-
-.chinaan-banner .chinaan_member .tab-cont2 {
-  padding: 20px 5px 5px 20px;
-  background-color: #649cf0;
-}
-
-.chinaan-banner .chinaan_member .tab-cont2 .cont-item {
-  background-color: #ffffff;
-  float: left;
-}
-
-.chinaan-banner .chinaan_member .tab-cont2 .big {
-  width: 303px;
-  height: 282px;
-  margin-right: 15px;
-  margin-bottom: 15px;
-  padding: 20px;
-}
-
-.chinaan-banner .chinaan_member .tab-cont2 .big .appoint-btn {
-  width: 76px;
-  height: 28px;
-  border-radius: 14px;
-  border: solid 1px #649cf0;
-  text-align: center;
-  line-height: 28px;
-  color: #649cf0;
-}
-
-.chinaan-banner .chinaan_member .tab-cont2 .big .appoint-btn:hover {
-  background: #649cf0;
-  color: #ffffff;
-}
-
-.chinaan-banner .chinaan_member .tab-cont2 .big .appoint-btn.success {
-  background-color: #dddddd;
-  border: 1px solid #dddddd;
-  color: #666666;
-}
-
-.chinaan-banner .chinaan_member .tab-cont2 .big .item-detail {
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0;
-  color: #888888;
-  padding-top: 10px;
-  border-bottom: 1px solid #dddddd;
-}
-
-.chinaan-banner .chinaan_member .tab-cont2 .big .item-detail .detail-title {
+  padding-top: 8px;
   font-size: 16px;
-  line-height: 26px;
-  letter-spacing: 1px;
-  color: #333333;
-}
-
-.chinaan-banner .chinaan_member .tab-cont2 .big .item-detail .detail-row {
-  font-size: 14px;
   line-height: 24px;
-  letter-spacing: 0;
-  padding-bottom: 10px;
+  color: #444444;
+  margin-bottom: 8px;
 }
 
-.chinaan-banner .chinaan_member .tab-cont2 .big .item-detail .detail-row .detail-key {
-  float: left;
-  color: #333333;
+.chinaan-banner .chinaan_member .tab-cont .cont-item .item-detail:hover {
+  color: #ff4b02;
 }
 
-.chinaan-banner .chinaan_member .tab-cont2 .big .item-detail .detail-row .detail-val {
-  float: left;
-  max-width: 230px;
+.chinaan-banner .chinaan_member .tab-cont .cont-item .cont-row {
+  margin-bottom: 8px;
   color: #666666;
+  line-height: 28px;
+  text-align: center;
 }
 
-.chinaan-banner .chinaan_member .tab-cont2 .big .detail-price .original {
+.chinaan-banner .chinaan_member .tab-cont .cont-item .cont-row .original {
   line-height: 30px;
   color: #888888;
+  float: right;
   text-decoration: line-through;
 }
 
-.chinaan-banner .chinaan_member .tab-cont2 .big .current {
+.chinaan-banner .chinaan_member .tab-cont .cont-item .cont-row .current {
   float: left;
-  font-family: MicrosoftYaHei-Bold;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 24px;
   letter-spacing: 1px;
-  color: #ec5148;
+  color: #ff4b02;
 }
 
-.chinaan-banner .chinaan_member .tab-cont2 .big .item-btn {
-  width: 90px;
-  height: 28px;
+.chinaan-banner .chinaan_member .tab-cont .cont-item .cont-row .current span {
+  font-size: 22px;
+}
+
+.chinaan-banner .chinaan_member .tab-cont .cont-item .cont-row .more-discount {
+  float: left;
+  height: 22px;
+  border-radius: 12px;
+  border: solid 1px #ff4b02;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  color: #ff4b02;
+  padding-right: 8px;
+}
+
+.chinaan-banner .chinaan_member .tab-cont .cont-item .cont-row .more-discount span {
+  display: inline-block;
+  width: 22px;
+  background-color: #ff4b02;
+  border-radius: 12px;
+  border: solid 1px #ff4b02;
   text-align: center;
-  line-height: 28px;
   color: #ffffff;
-  background-color: #ec5148;
-  border-radius: 2px;
+}
+
+.chinaan-banner .chinaan_member .tab-cont .cont-item .cont-row strong {
+  color: #fba807;
+}
+
+.chinaan-banner .chinaan_member .tab-cont .cont-item .cont-row .test1 {
   float: right;
 }
 
-.chinaan-banner .chinaan_member .tab-cont2 .big:hover {
-  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+.good-lesson {
+  margin-top: 80px;
+}
+
+.good-lesson .h2 {
+  text-align: center;
+  font-size: 36px;
+  line-height: 61px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.good-lesson .h2 img {
+  vertical-align: middle;
+}
+
+.good-lesson .lesson-cont {
+  height: 420px;
+  padding: 40px;
+  background: url("../images/chinan_good_lesson.png") no-repeat center;
+}
+
+.good-lesson .lesson-cont .cont-col {
+  float: left;
+}
+
+.good-lesson .lesson-cont .cont-col .col-item {
+  width: 233px;
+  height: 118px;
+  border-radius: 4px;
+  border: solid 1px #ff4b02;
+  position: relative;
+  margin-bottom: 30px;
+  background: #ffffff;
+}
+
+.good-lesson .lesson-cont .cont-col .col-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.good-lesson .lesson-cont .cont-col .col-item p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #666666;
+  margin-top: 38px;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.good-lesson .lesson-cont .cont-col.left {
+  margin-top: 75px;
+}
+
+.good-lesson .lesson-cont .cont-col.middle {
+  margin-left: 25px;
+}
+
+.good-lesson .lesson-cont .cont-col.middle .col-item {
+  float: left;
+  margin-right: 29px;
+}
+
+.good-lesson .lesson-cont .cont-col.middle .dry-cargo {
+  width: 438px;
+  height: 230px;
+  padding: 25px 30px 15px 30px;
+  background-color: #fff0eb;
+  border-radius: 4px;
+  border: solid 1px #ff4b02;
+  clear: both;
+  margin-top: 30px;
+}
+
+.good-lesson .lesson-cont .cont-col.middle .dry-cargo .cargo-title {
+  font-family: MicrosoftYaHei-Bold;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ff4b02;
+  text-align: center;
+  border-bottom: 1px solid #ff4b02;
+  padding-bottom: 22px;
+  position: relative;
+}
+
+.good-lesson .lesson-cont .cont-col.middle .dry-cargo .cargo-title .after {
+  width: 20px;
+  height: 5px;
+  background-color: #ff4b02;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.good-lesson .lesson-cont .cont-col.middle .dry-cargo .exam {
+  width: 360px;
+  height: 165px;
+  margin: 12px auto;
+}
+
+.good-lesson .lesson-cont .cont-col.middle .dry-cargo .exam .exam-title {
+  font-family: MicrosoftYaHei-Bold;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.good-lesson .lesson-cont .cont-col.middle .dry-cargo .exam .types .types-select {
+  display: none;
+}
+
+.good-lesson .lesson-cont .cont-col.middle .dry-cargo .exam .types .types-replace {
+  cursor: default;
+  overflow: visible;
+  position: relative;
+  width: 100%;
+  text-align: left;
+}
+
+.good-lesson .lesson-cont .cont-col.middle .dry-cargo .exam .types .types-replace .current-type {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  background: url("../images/chinaan_triangle.png") no-repeat 332px center #ffffff;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #999999;
+  font-size: 14px;
+  outline: none;
+  border: none;
+}
+
+.good-lesson .lesson-cont .cont-col.middle .dry-cargo .exam .types .types-replace .types-options {
+  display: none;
+  list-style-type: none;
+  margin-top: 0;
+  position: absolute;
+  width: 100%;
+  background-color: #FFF;
+  z-index: 10;
+  color: #999999;
+  font-size: 14px;
+}
+
+.good-lesson .lesson-cont .cont-col.middle .dry-cargo .exam .types .types-replace .types-options li {
+  line-height: 35px;
+  padding: 0 15px;
+  background-color: #FFF;
+  border-top: 1px solid #FFF1DF;
+}
+
+.good-lesson .lesson-cont .cont-col.middle .dry-cargo .exam .types .types-replace .types-options li:hover {
+  background: #FFF1DF;
+}
+
+.good-lesson .lesson-cont .cont-col.middle .dry-cargo .exam .types .download {
+  width: 360px;
+  height: 44px;
+  background-color: #ff4b02;
+  font-size: 16px;
+  line-height: 44px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.good-lesson .lesson-cont .cont-col.middle .dry-cargo .exam .explain {
+  font-size: 12px;
+  line-height: 24px;
+  color: #666666;
+  text-align: center;
+}
+
+.good-lesson .lesson-cont .cont-col.right {
+  margin-left: -4px;
+  margin-top: 75px;
 }

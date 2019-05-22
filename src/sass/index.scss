@@ -12,12 +12,14 @@ li {
   list-style-type: none;
 }
 
-.father-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
+.hover-effect {
+  transition: transform 0.5s;
+  &:hover {
+    transform: translateY(2px);
+  }
 }
 
+/*common style*/
 .header {
   //border: 1px solid #cccccc;
   .logo {
@@ -37,9 +39,6 @@ li {
       display: inline-block;
       margin-left: 16px;
     }
-    .learn {
-
-    }
     .login {
       width: 80px;
       text-align: center;
@@ -54,20 +53,81 @@ li {
       border-radius: 15px;
       border: solid 1px #649cf0;
       color: #649cf0;
+      &:hover{
+        background-color: #649cf0;
+        border: solid 1px #649cf0;
+        color: #ffffff;
+      }
+    }
+  }
+}
+.h2 {
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0;
+  color: #333333;
+  margin-bottom: 28px;
+}
+.footer {
+  //height: 100px;
+  padding: 29px 0 26px;
+  background-color: #333333;
+  text-align: center;
+  font-size: 14px;
+  .link {
+    color: #5a5a5a;
+    margin-bottom: 8px;
+    a {
+      color: #ffffff;
+      display: inline-block;
+      padding: 0 8px;
+      @extend .hover-effect;
+    }
+  }
+  .address {
+    color: #fafafa;
+    opacity: 0.4;
+  }
+}
+.school-module{
+  .tab-cont{
+    margin-right: -20px;
+    .cont-item{
+      padding: 16px 20px 20px;
+      background-color: #ffffff;
+      float: left;
+      margin-right: 20px;
+      .item-top {
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0;
+        color: #000000;
+        margin-bottom: 12px;
+        &:hover{
+          color: #f15656;
+        }
+      }
+      .item-detail{
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0;
+        color: #888888;
+        border-bottom: 1px solid #dddddd;
+        padding-bottom: 10px;
+      }
+      &:hover {
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+      }
     }
   }
 }
 
+/*环球网校*/
 .index-banner {
-  //position: relative;
   height: 500px;
   background: url("../images/index_banner.png") no-repeat center;
   .discount_coupon {
-    //width: 782px;
     height: 500px;
-    //border: 1px solid #cccccc;
-    //position: absolute;
-    //top: 0;
     margin-left: 57px;
     float: left;
     .title {
@@ -77,7 +137,6 @@ li {
       line-height: 72px;
       margin-top: 80px;
       .italic {
-        font-family: MicrosoftYaHei;
         font-style: italic;
       }
       .sum {
@@ -99,6 +158,11 @@ li {
       margin-top: 36px;
       display: inline-block;
       margin-right: 27px;
+      .bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
       .coupon-cont {
         width: 100%;
         height: 100%;
@@ -111,7 +175,6 @@ li {
           height: 91px;
           //border: 1px solid #000;
           margin-top: 19px;
-          border-right: 1px dotted #ffffff;
           text-align: center;
           letter-spacing: 0;
           float: left;
@@ -163,6 +226,8 @@ li {
       color: #ffffff;
       text-align: center;
       margin: 60px auto 0;
+
+      @extend .hover-effect;
     }
   }
   .applet {
@@ -171,9 +236,6 @@ li {
     background-color: #ffffff;
     border-radius: 11px;
     opacity: 0.9;
-    //position: absolute;
-    //top: 140px;
-    //left: 930px;
     float: right;
     margin-top: 140px;
     text-align: center;
@@ -191,15 +253,11 @@ li {
     }
   }
 }
-
 /*会员专属*/
 .membership {
-  //height: 649px;
-  //height: 500px;
   background-color: #f8f8f8;
   padding-top: 60px;
   padding-bottom: 40px;
-
   .tab-head {
     margin-right: -20px;
     margin-bottom: 24px;
@@ -207,7 +265,6 @@ li {
       width: 138px;
       height: 42px;
       border: solid 1px #bbbbbb;
-      font-family: MicrosoftYaHei;
       font-size: 16px;
       font-weight: normal;
       font-stretch: normal;
@@ -218,7 +275,7 @@ li {
       margin-right: 20px;
       float: left;
       cursor: pointer;
-      &:hover {
+      &.active, &:hover {
         background-color: #f15656;
         border: 1px solid #f15656;
         color: #ffffff;
@@ -226,34 +283,20 @@ li {
     }
   }
   .tab-cont {
-    margin-right: -20px;
+    display: none;
+    &.active{
+      display: block;
+    }
     .cont-item {
       width: 220px;
-      //height: 260px;
-      padding: 16px 20px 20px;
-      background-color: #ffffff;
-      float: left;
-      margin-right: 20px;
       position: relative;
       .hot {
         position: absolute;
         top: 0;
         right: 0;
       }
-      .item-top {
-        font-size: 16px;
-        line-height: 30px;
-        letter-spacing: 0;
-        color: #000000;
-        margin-bottom: 12px;
-      }
       .item-detail {
-        font-size: 14px;
-        line-height: 24px;
-        letter-spacing: 0;
-        color: #888888;
-        border-bottom: 1px solid #dddddd;
-        padding-bottom: 10px;
+
         .detail-key {
           float: left;
         }
@@ -297,9 +340,7 @@ li {
           color: #ffffff;
         }
       }
-      &:hover {
-        box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-      }
+
     }
   }
   .ad {
@@ -315,33 +356,17 @@ li {
     }
   }
 }
-
 /*今日直播*/
 .live {
-  //height: 790px;
   background: #ffffff;
   padding-top: 40px;
   padding-bottom: 17px;
   .tab-cont {
-    margin-right: -20px;
     .cont-item {
-      //width: 260px;
-      //height: 340px;
-      background-color: #ffffff;
       border: solid 1px #dddddd;
       width: 218px;
-      //height: 260px;
-      padding: 16px 20px 20px;
-      float: left;
-      margin-right: 20px;
       margin-bottom: 20px;
-      .item-top {
-        font-size: 16px;
-        line-height: 30px;
-        letter-spacing: 0;
-        color: #000000;
-        margin-bottom: 12px;
-      }
+
       .item-tag {
         margin-bottom: 20px;
         span {
@@ -357,12 +382,7 @@ li {
         }
       }
       .item-detail {
-        font-size: 14px;
-        line-height: 24px;
-        letter-spacing: 0;
-        color: #888888;
-        border-bottom: 1px solid #dddddd;
-        padding-bottom: 10px;
+
         .detail-time {
           color: #888888;
           margin-bottom: 20px;
@@ -411,17 +431,11 @@ li {
           }
         }
       }
-
-      &:hover {
-        box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-      }
     }
   }
 }
-
 /*题库*/
 .exercise {
-  //height: 1356px;
   padding-top: 40px;
   background: #f8f8f8;
   .ad {
@@ -452,16 +466,12 @@ li {
       }
     }
   }
-
   .sort {
     margin-right: -20px;
     padding-bottom: 40px;
     .cont-item {
-      //width: 260px;
-      //height: 340px;
       background-color: #ffffff;
       width: 164px;
-      //height: 260px;
       padding: 16px 20px 17px;
       float: left;
       margin-right: 20px;
@@ -475,6 +485,9 @@ li {
         height: 45px;
         text-align: center;
         border-bottom: 1px solid #dddddd;
+        &:hover{
+          color: #f15656;
+        }
       }
       .item-detail {
         font-size: 14px;
@@ -514,7 +527,6 @@ li {
           color: #666666;
         }
       }
-
       &:hover {
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
       }
@@ -523,42 +535,10 @@ li {
 
 }
 
-.footer {
-  //height: 100px;
-  padding: 29px 0 26px;
-  background-color: #333333;
-  text-align: center;
-  font-size: 14px;
-  .link {
-    color: #5a5a5a;
-    margin-bottom: 8px;
-    a {
-      color: #ffffff;
-      display: inline-block;
-      padding: 0 8px;
-    }
-  }
-  .address {
-    color: #fafafa;
-    opacity: 0.4;
-  }
-}
-
-/*common style*/
-.h2 {
-  font-size: 24px;
-  line-height: 36px;
-  letter-spacing: 0;
-  color: #333333;
-  margin-bottom: 28px;
-}
-
+/*新东方在线*/
 /*会员专属*/
 .koolearn-membership {
-  //height: 649px;
-  //height: 500px;
   background-color: #f8f8f8;
-  //padding-top: 60px;
   padding-bottom: 80px;
   .member {
     padding-top: 80px;
@@ -588,7 +568,7 @@ li {
         margin-right: 20px;
         float: left;
         cursor: pointer;
-        &:hover {
+        &.active, &:hover {
           background-color: #649cf0;
           border: 1px solid #649cf0;
           color: #ffffff;
@@ -596,9 +576,12 @@ li {
       }
     }
     .tab-cont {
-      //height: 288px;
       padding: 20px 8px 20px 20px;
       background-color: #649cf0;
+      display: none;
+      &.active{
+        display: block;
+      }
       .cont-item {
         width: 236px;
         padding: 10px;
@@ -620,7 +603,6 @@ li {
             .original {
               line-height: 30px;
               color: #888888;
-              //float: left;
               text-decoration: line-through;
             }
 
@@ -643,8 +625,8 @@ li {
           color: #ffffff;
           background-color: #ec5148;
           border-radius: 2px;
-          //margin: 20px auto 0;
           float: right;
+          @extend .hover-effect;
         }
         &:hover {
           box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
@@ -652,16 +634,11 @@ li {
       }
     }
     .tab-cont2 {
-      //height: 288px;
       padding: 20px 5px 5px 20px;
       background-color: #649cf0;
       .cont-item {
-        //width: 236px;
-        //padding: 10px;
         background-color: #ffffff;
         float: left;
-        //margin-right: 12px;
-
       }
       .big {
         width: 303px;
@@ -677,8 +654,6 @@ li {
           text-align: center;
           line-height: 28px;
           color: #649cf0;
-          //margin: 20px auto 0;
-          //float: right;
           &:hover {
             background: #649cf0;
             color: #ffffff;
@@ -723,7 +698,6 @@ li {
           .original {
             line-height: 30px;
             color: #888888;
-            //float: left;
             text-decoration: line-through;
           }
 
@@ -746,6 +720,7 @@ li {
           background-color: #ec5148;
           border-radius: 2px;
           float: right;
+          @extend .hover-effect;
         }
         &:hover {
           box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
@@ -761,29 +736,27 @@ li {
     border-radius: 25px;
     margin: 39px auto 0;
     text-align: center;
+
+    @extend .hover-effect;
     img {
       vertical-align: middle;
       margin-top: -8px;
     }
-    a {
-      display: inline-block;
+    span {
       font-size: 16px;
       color: #ffffff;
       margin-left: 10px;
     }
   }
 }
-
 .about-us {
-  //height: 380px;
   background: url("../images/koolearn_aboutus.png") no-repeat top center;
   border-top: 1px solid transparent;
   .container {
     height: 283px;
     padding-top: 20px;
     background-color: #ffffff;
-    box-shadow: 8px 13px 25px 0px rgba(102, 102, 102, 0.14);
-
+    box-shadow: 8px 13px 25px 0 rgba(102, 102, 102, 0.14);
     margin-top: 193px;
     margin-bottom: 61px;
     .koolearn-logo {
@@ -812,30 +785,36 @@ li {
   }
 }
 
+/*中华会计网*/
 .chinaan-banner {
-  height: 2648px;
-  background: url("../images/chinaan_banner1.png") no-repeat top center;
-  padding-top: 600px;
-  .chinaan_member{
+  //height: 2648px;
+  background: url("../images/chinaan_banner1.png") no-repeat top center #bd141c;
+  padding-top: 500px;
+  padding-bottom: 60px;
+  .chinaan_member {
+    margin-top: 84px;
     .h2 {
-      font-size: 36px;
-      color: #ffffff;
       text-align: center;
-      //margin-top: 510px;
+      font-size: 36px;
+      line-height: 61px;
       font-weight: bold;
+      color: #ffffff;
+      img {
+        vertical-align: middle;
+      }
     }
     .coupon-item {
       width: 542px;
       height: 140px;
-      //padding: 10px;
       //border: 1px solid #cccccc;
       position: relative;
-      //margin-top: 36px;
       margin: 0 auto;
-
+      .bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
       .coupon-cont {
-        //width: 100%;
-        //height: 100%;
         padding: 10px;
         //border: 1px solid #cccccc;
         position: absolute;
@@ -850,41 +829,28 @@ li {
           float: left;
         }
         .cont-sum {
-          //width: 125px;
-          //height: 91px;
-          //border: 1px solid #000;
-          //margin-top: 19px;
-          //border-right: 1px dotted #ffffff;
           text-align: center;
           letter-spacing: 0;
           float: left;
           line-height: 122px;
+          padding-left: 10px;
           span {
             font-size: 30px;
-            //float: left;
-            //line-height: 116px;
             font-family: MicrosoftYaHei-Bold;
             font-weight: bold;
-            //margin-left: -6px;
           }
           strong {
             font-size: 60px;
-            //float: left;
             font-family: Impact;
             font-weight: normal;
-            //line-height: 91px;
-            //margin-left: -6px;
+            margin-left: -4px;
           }
         }
         .cont-detail {
-          //width: 193px;
-          //height: 91px;
-          //float: left;
           font-size: 26px;
-          //line-height: 32px;
-          letter-spacing: 2px;
           line-height: 122px;
-          margin-left: 29px;
+          float: right;
+          padding-right: 18px;
           color: #ff4b02;
         }
         .get{
@@ -892,18 +858,9 @@ li {
           height: 120px;
           float: right;
           margin-left: 20px;
+          display: block;
+          @extend .hover-effect;
         }
-      }
-    }
-  }
-  .chinaan_member {
-    //padding-top: 80px;
-    .h2 {
-      text-align: center;
-      font-size: 34px;
-      line-height: 61px;
-      img {
-        vertical-align: middle;
       }
     }
     .tab-head {
@@ -922,16 +879,32 @@ li {
         margin-right: 11px;
         float: left;
         cursor: pointer;
-        //&:hover {
-        //  background-color: #649cf0;
-        //  color: #ffffff;
-        //}
+        &.active{
+          background-color: #fba807;
+          color: #ffffff;
+          position: relative;
+          span{
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 12px solid #fba807;
+          }
+        }
       }
     }
     .tab-cont {
-      //height: 288px;
       padding: 20px 8px 20px 20px;
       background-color: #ffffff;
+      display: none;
+      &.active{
+        display: block;
+      }
       .cont-item {
         width: 234px;
         padding: 10px;
@@ -940,150 +913,236 @@ li {
         margin-right: 12px;
         border: 1px solid #eeeeee;
         .item-detail {
-          font-size: 14px;
+          padding-top: 8px;
+          font-size: 16px;
           line-height: 24px;
-          letter-spacing: 0;
-          color: #888888;
-          padding-top: 10px;
-          .detail-row {
-            color: #333333;
-            padding-left: 3px;
-            width: 210px;
-          }
-          .detail-price {
-            .original {
-              line-height: 30px;
-              color: #888888;
-              //float: left;
-              text-decoration: line-through;
-            }
-
+          color: #444444;
+          margin-bottom: 8px;
+          &:hover{
+            color: #ff4b02;
           }
         }
-        .current {
-          float: left;
-          font-family: MicrosoftYaHei-Bold;
-          font-weight: bold;
-          font-size: 20px;
-          line-height: 24px;
-          letter-spacing: 1px;
-          color: #ec5148;
-        }
-        .item-btn {
-          width: 76px;
-          height: 28px;
-          text-align: center;
+        .cont-row{
+          margin-bottom: 8px;
+          color: #666666;
           line-height: 28px;
-          color: #ffffff;
-          background-color: #ec5148;
-          border-radius: 2px;
-          //margin: 20px auto 0;
-          float: right;
-        }
-        &:hover {
-          box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-        }
-      }
-    }
-    .tab-cont2 {
-      //height: 288px;
-      padding: 20px 5px 5px 20px;
-      background-color: #649cf0;
-      .cont-item {
-        //width: 236px;
-        //padding: 10px;
-        background-color: #ffffff;
-        float: left;
-        //margin-right: 12px;
-
-      }
-      .big {
-        width: 303px;
-        height: 282px;
-        margin-right: 15px;
-        margin-bottom: 15px;
-        padding: 20px;
-        .appoint-btn {
-          width: 76px;
-          height: 28px;
-          border-radius: 14px;
-          border: solid 1px #649cf0;
           text-align: center;
-          line-height: 28px;
-          color: #649cf0;
-          //margin: 20px auto 0;
-          //float: right;
-          &:hover {
-            background: #649cf0;
-            color: #ffffff;
-          }
-          &.success {
-            background-color: #dddddd;
-            border: 1px solid #dddddd;
-            color: #666666;
-          }
-        }
-        .item-detail {
-          font-size: 14px;
-          line-height: 24px;
-          letter-spacing: 0;
-          color: #888888;
-          padding-top: 10px;
-          border-bottom: 1px solid #dddddd;
-          .detail-title {
-            font-size: 16px;
-            line-height: 26px;
-            letter-spacing: 1px;
-            color: #333333;
-          }
-          .detail-row {
-            font-size: 14px;
-            line-height: 24px;
-            letter-spacing: 0;
-            padding-bottom: 10px;
-            .detail-key {
-              float: left;
-              color: #333333;
-            }
-            .detail-val {
-              float: left;
-              max-width: 230px;
-              color: #666666;
-            }
-          }
-
-        }
-        .detail-price {
           .original {
             line-height: 30px;
             color: #888888;
-            //float: left;
+            float: right;
             text-decoration: line-through;
           }
+          .current {
+            float: left;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 1px;
+            color: #ff4b02;
+            span{
+              font-size: 22px;
+            }
+          }
+          .more-discount{
+            float: left;
+            height: 22px;
+            border-radius: 12px;
+            border: solid 1px #ff4b02;
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: 1px;
+            color: #ff4b02;
+            padding-right: 8px;
+            span{
+              display: inline-block;
+              width: 22px;
+              background-color: #ff4b02;
+              border-radius: 12px;
+              border: solid 1px #ff4b02;
+              text-align: center;
+              color: #ffffff;
+            }
+          }
+          strong{
+            color: #fba807;
+          }
+          .test1{
+            float: right;
+          }
+        }
 
+      }
+    }
+  }
+}
+.good-lesson{
+  margin-top: 80px;
+  .h2 {
+    text-align: center;
+    font-size: 36px;
+    line-height: 61px;
+    font-weight: bold;
+    color: #ffffff;
+    img {
+      vertical-align: middle;
+    }
+  }
+  .lesson-cont{
+    height: 420px;
+    padding: 40px;
+    background: url("../images/chinan_good_lesson.png") no-repeat center;
+    .cont-col{
+      float: left;
+      //margin-right: 25px;
+      .col-item{
+        width: 233px;
+        height: 118px;
+        border-radius: 4px;
+        border: solid 1px #ff4b02;
+        position: relative;
+        margin-bottom: 30px;
+        background: #ffffff;
+        img{
+          position: absolute;
+          top: 0;
+          left: 0;
         }
-        .current {
+        p{
+          font-size: 14px;
+          line-height: 20px;
+          //letter-spacing: 1px;
+          color: #666666;
+          margin-top: 38px;
+          padding: 10px 20px;
+          //background: #ffffff;
+          border-radius: 4px;
+        }
+      }
+      &.left{
+        margin-top: 75px;
+      }
+      &.middle{
+        margin-left: 25px;
+        .col-item{
           float: left;
-          font-family: MicrosoftYaHei-Bold;
-          font-weight: bold;
-          font-size: 20px;
-          line-height: 24px;
-          letter-spacing: 1px;
-          color: #ec5148;
+          margin-right: 29px;
         }
-        .item-btn {
-          width: 90px;
-          height: 28px;
-          text-align: center;
-          line-height: 28px;
-          color: #ffffff;
-          background-color: #ec5148;
-          border-radius: 2px;
-          float: right;
+        .dry-cargo{
+          width: 438px;
+          height: 230px;
+          padding: 25px 30px 15px 30px;
+          background-color: #fff0eb;
+          border-radius: 4px;
+          border: solid 1px #ff4b02;
+          clear: both;
+          margin-top: 30px;
+          .cargo-title{
+            font-family: MicrosoftYaHei-Bold;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 24px;
+            color: #ff4b02;
+            text-align: center;
+            border-bottom: 1px solid #ff4b02;
+            padding-bottom: 22px;
+            position: relative;
+            .after{
+              width: 20px;
+              height: 5px;
+              background-color: #ff4b02;
+              position: absolute;
+              bottom: -3px;
+              left: 0;
+              right: 0;
+              margin: auto;
+            }
+          }
+          .exam{
+            width: 360px;
+            height: 165px;
+            margin: 12px auto;
+            .exam-title{
+              font-family: MicrosoftYaHei-Bold;
+              font-weight: bold;
+              font-size: 18px;
+              line-height: 24px;
+              color: #333333;
+              margin-bottom: 15px;
+            }
+            .types {
+              .types-select {
+                display: none;
+              }
+              .types-replace {
+                cursor: default;
+                overflow: visible;
+                position: relative;
+                width: 100%;
+                text-align: left;
+                .current-type {
+                  width: 100%;
+                  height: 44px;
+                  line-height: 44px;
+                  background: url("../images/chinaan_triangle.png") no-repeat 332px center #ffffff;
+                  padding: 0 15px;
+                  box-sizing: border-box;
+                  color: #999999;
+                  font-size: 14px;
+                  outline: none;
+                  border: none;
+                }
+                .types-options {
+                  display: none;
+                  list-style-type: none;
+                  margin-top: 0;
+                  position: absolute;
+                  width: 100%;
+                  background-color: #FFF;
+                  z-index: 10;
+                  color: #999999;
+                  font-size: 14px;
+                  li {
+                    line-height: 35px;
+                    padding: 0 15px;
+                    background-color: #FFF;
+                    border-top: 1px solid #FFF1DF;
+                    &:hover {
+                      background: #FFF1DF;
+                    }
+                  }
+                }
+              }
+              .download{
+                width: 360px;
+                height: 44px;
+                background-color: #ff4b02;
+
+                font-size: 16px;
+                line-height: 44px;
+                letter-spacing: 1px;
+                color: #ffffff;
+                text-align: center;
+                margin-top: 16px;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                @extend .hover-effect;
+              }
+            }
+
+            .explain{
+              font-size: 12px;
+              line-height: 24px;
+              color: #666666;
+              text-align: center;
+            }
+          }
         }
-        &:hover {
-          box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-        }
+      }
+      &.right{
+        margin-left: -4px;
+        margin-top: 75px;
       }
     }
   }
