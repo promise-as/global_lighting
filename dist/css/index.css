@@ -7,6 +7,7 @@
 
 a {
   display: block;
+  cursor: pointer;
 }
 
 li {
@@ -23,6 +24,12 @@ li {
 .hover-effect:hover, .footer .link a:hover, .index-banner .discount_coupon .coupon-btn:hover, .koolearn-membership .member .tab-cont .cont-item .item-btn:hover, .koolearn-membership .member .tab-cont2 .big .item-btn:hover, .koolearn-membership .consult:hover, .chinaan-banner .chinaan_member .coupon-item .coupon-cont .get:hover, .good-lesson .lesson-cont .cont-col.middle .dry-cargo .exam .types .download:hover {
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
+}
+
+.exercise .sort .cont-item .item-top, .chinaan-banner .chinaan_member .tab-cont .cont-item .item-detail {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /*common style*/
@@ -292,7 +299,7 @@ li {
 }
 
 .membership .tab-head .head-item {
-  width: 138px;
+  min-width: 138px;
   height: 42px;
   border: solid 1px #bbbbbb;
   font-size: 16px;
@@ -620,7 +627,7 @@ li {
 }
 
 .koolearn-membership .member .tab-head .head-item {
-  width: 138px;
+  min-width: 138px;
   height: 42px;
   background-color: #f5f9ff;
   border: solid 1px #649cf0;
@@ -672,6 +679,10 @@ li {
   color: #333333;
   padding-left: 3px;
   width: 210px;
+}
+
+.koolearn-membership .member .tab-cont .cont-item .item-detail .detail-row:hover {
+  color: #ec5148;
 }
 
 .koolearn-membership .member .tab-cont .cont-item .item-detail .detail-price .original {
@@ -759,6 +770,10 @@ li {
   line-height: 26px;
   letter-spacing: 1px;
   color: #333333;
+}
+
+.koolearn-membership .member .tab-cont2 .big .item-detail .detail-title:hover {
+  color: #ec5148;
 }
 
 .koolearn-membership .member .tab-cont2 .big .item-detail .detail-row {
@@ -968,7 +983,7 @@ li {
 }
 
 .chinaan-banner .chinaan_member .tab-head .head-item {
-  width: 148px;
+  min-width: 148px;
   height: 48px;
   line-height: 48px;
   background-color: #ffffff;
