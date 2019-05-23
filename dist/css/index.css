@@ -14,14 +14,14 @@ li {
   list-style-type: none;
 }
 
-.hover-effect, .footer .link a, .index-banner .discount_coupon .coupon-btn, .koolearn-membership .member .tab-cont .cont-item .item-btn, .koolearn-membership .member .tab-cont2 .big .item-btn, .koolearn-membership .consult, .chinaan-banner .chinaan_member .coupon-item .coupon-cont .get, .good-lesson .lesson-cont .cont-col.middle .dry-cargo .exam .types .download {
+.hover-effect, .footer .link a, .index-banner .discount_coupon .coupon-btn, .koolearn-membership .member .tab-cont .cont-item .item-btn, .koolearn-membership .member .tab-cont2 .vip-price .item-btn, .koolearn-membership .consult, .chinaan-banner .chinaan_member .coupon-item .coupon-cont .get, .good-lesson .lesson-cont .cont-col.middle .dry-cargo .exam .types .download {
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
-.hover-effect:hover, .footer .link a:hover, .index-banner .discount_coupon .coupon-btn:hover, .koolearn-membership .member .tab-cont .cont-item .item-btn:hover, .koolearn-membership .member .tab-cont2 .big .item-btn:hover, .koolearn-membership .consult:hover, .chinaan-banner .chinaan_member .coupon-item .coupon-cont .get:hover, .good-lesson .lesson-cont .cont-col.middle .dry-cargo .exam .types .download:hover {
+.hover-effect:hover, .footer .link a:hover, .index-banner .discount_coupon .coupon-btn:hover, .koolearn-membership .member .tab-cont .cont-item .item-btn:hover, .koolearn-membership .member .tab-cont2 .vip-price .item-btn:hover, .koolearn-membership .consult:hover, .chinaan-banner .chinaan_member .coupon-item .coupon-cont .get:hover, .good-lesson .lesson-cont .cont-col.middle .dry-cargo .exam .types .download:hover {
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
 }
@@ -43,13 +43,16 @@ li {
   height: 30px;
   float: right;
   margin-top: 35px;
-  line-height: 30px;
   font-size: 14px;
 }
 
 .header .login_register .learn, .header .login_register .login, .header .login_register .register {
   display: inline-block;
   margin-left: 16px;
+}
+
+.header .login_register .learn {
+  line-height: 30px;
 }
 
 .header .login_register .login {
@@ -59,6 +62,7 @@ li {
   border: solid 1px #649cf0;
   border-radius: 15px;
   color: #ffffff;
+  line-height: 28px;
 }
 
 .header .login_register .register {
@@ -67,6 +71,7 @@ li {
   border-radius: 15px;
   border: solid 1px #649cf0;
   color: #649cf0;
+  line-height: 28px;
 }
 
 .header .login_register .register:hover {
@@ -81,6 +86,10 @@ li {
   letter-spacing: 0;
   color: #333333;
   margin-bottom: 28px;
+}
+
+.h2 span {
+  margin: 0 10px;
 }
 
 .footer {
@@ -111,7 +120,7 @@ li {
 }
 
 .school-module .tab-cont .cont-item {
-  padding: 16px 20px 20px;
+  padding: 20px;
   background-color: #ffffff;
   float: left;
   margin-right: 20px;
@@ -122,7 +131,7 @@ li {
   line-height: 30px;
   letter-spacing: 0;
   color: #000000;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .school-module .tab-cont .cont-item .item-top:hover {
@@ -135,7 +144,7 @@ li {
   letter-spacing: 0;
   color: #888888;
   border-bottom: 1px solid #dddddd;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
 }
 
 .school-module .tab-cont .cont-item:hover {
@@ -205,6 +214,7 @@ li {
 .index-banner .discount_coupon .coupon-item .coupon-cont .cont-sum {
   width: 125px;
   height: 91px;
+  line-height: 91px;
   margin-top: 19px;
   text-align: center;
   letter-spacing: 0;
@@ -228,19 +238,19 @@ li {
 }
 
 .index-banner .discount_coupon .coupon-item .coupon-cont .cont-detail {
-  width: 193px;
-  height: 91px;
+  max-width: 220px;
   float: left;
   margin-left: 19px;
   font-size: 16px;
   margin-top: 19px;
-  letter-spacing: 0;
 }
 
 .index-banner .discount_coupon .coupon-item .coupon-cont .cont-detail strong {
-  padding: 3px 14px 4px 15px;
-  border: 1px solid #ffffff;
   display: inline-block;
+  min-width: 93px;
+  border: 1px solid #ffffff;
+  line-height: 28px;
+  text-align: center;
   margin-bottom: 12px;
 }
 
@@ -295,17 +305,17 @@ li {
 
 .membership .tab-head {
   margin-right: -20px;
-  margin-bottom: 24px;
 }
 
 .membership .tab-head .head-item {
+  margin-bottom: 24px;
   min-width: 138px;
-  height: 42px;
+  height: 40px;
   border: solid 1px #bbbbbb;
   font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
-  line-height: 42px;
+  line-height: 40px;
   letter-spacing: 0;
   color: #333333;
   text-align: center;
@@ -349,7 +359,7 @@ li {
 }
 
 .membership .tab-cont .cont-item .item-detail .detail-price {
-  margin-top: 12px;
+  margin-top: 15px;
 }
 
 .membership .tab-cont .cont-item .item-detail .detail-price .original {
@@ -419,7 +429,7 @@ li {
 }
 
 .live .tab-cont .cont-item .item-tag {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .live .tab-cont .cont-item .item-tag span {
@@ -430,7 +440,7 @@ li {
   background-color: #dddddd;
   border-radius: 12px;
   text-align: center;
-  margin-right: 12px;
+  margin-right: 10px;
   color: #666666;
 }
 
@@ -493,13 +503,19 @@ li {
 }
 
 .exercise .ad {
+  width: 1100px;
   height: 150px;
   font-size: 26px;
-  letter-spacing: 0;
   text-align: center;
-  background: url("../images/exercise2.png") no-repeat center;
   margin-top: 30px;
   margin-bottom: 40px;
+  position: relative;
+}
+
+.exercise .ad .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .exercise .ad .QRcode {
@@ -542,8 +558,8 @@ li {
   line-height: 30px;
   letter-spacing: 0;
   color: #000000;
-  margin-bottom: 12px;
-  height: 45px;
+  margin-bottom: 16px;
+  height: 46px;
   text-align: center;
   border-bottom: 1px solid #dddddd;
 }
@@ -557,6 +573,10 @@ li {
   line-height: 24px;
   letter-spacing: 0;
   color: #888888;
+}
+
+.exercise .sort .cont-item .item-detail .detail-row {
+  margin-bottom: 8px;
 }
 
 .exercise .sort .cont-item .item-detail .detail-row img {
@@ -727,80 +747,82 @@ li {
   float: left;
 }
 
-.koolearn-membership .member .tab-cont2 .big {
+.koolearn-membership .member .tab-cont2 .vip-price {
   width: 303px;
-  height: 282px;
   margin-right: 15px;
   margin-bottom: 15px;
   padding: 20px;
 }
 
-.koolearn-membership .member .tab-cont2 .big .appoint-btn {
+.koolearn-membership .member .tab-cont2 .vip-price .appoint-btn {
   width: 76px;
-  height: 28px;
+  height: 26px;
   border-radius: 14px;
   border: solid 1px #649cf0;
   text-align: center;
-  line-height: 28px;
+  line-height: 26px;
   color: #649cf0;
 }
 
-.koolearn-membership .member .tab-cont2 .big .appoint-btn:hover {
+.koolearn-membership .member .tab-cont2 .vip-price .appoint-btn:hover {
   background: #649cf0;
   color: #ffffff;
 }
 
-.koolearn-membership .member .tab-cont2 .big .appoint-btn.success {
+.koolearn-membership .member .tab-cont2 .vip-price .appoint-btn.success {
   background-color: #dddddd;
   border: 1px solid #dddddd;
   color: #666666;
 }
 
-.koolearn-membership .member .tab-cont2 .big .item-detail {
+.koolearn-membership .member .tab-cont2 .vip-price .item-detail {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0;
   color: #888888;
-  padding-top: 10px;
-  border-bottom: 1px solid #dddddd;
+  padding-top: 14px;
+  border-bottom: 1px solid #eeeeee;
 }
 
-.koolearn-membership .member .tab-cont2 .big .item-detail .detail-title {
+.koolearn-membership .member .tab-cont2 .vip-price .item-detail .detail-title {
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 1px;
   color: #333333;
+  margin-bottom: 10px;
 }
 
-.koolearn-membership .member .tab-cont2 .big .item-detail .detail-title:hover {
+.koolearn-membership .member .tab-cont2 .vip-price .item-detail .detail-title:hover {
   color: #ec5148;
 }
 
-.koolearn-membership .member .tab-cont2 .big .item-detail .detail-row {
+.koolearn-membership .member .tab-cont2 .vip-price .item-detail .detail-row {
   font-size: 14px;
   line-height: 24px;
-  letter-spacing: 0;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
 }
 
-.koolearn-membership .member .tab-cont2 .big .item-detail .detail-row .detail-key {
+.koolearn-membership .member .tab-cont2 .vip-price .item-detail .detail-row .detail-key {
   float: left;
   color: #333333;
 }
 
-.koolearn-membership .member .tab-cont2 .big .item-detail .detail-row .detail-val {
+.koolearn-membership .member .tab-cont2 .vip-price .item-detail .detail-row .detail-val {
   float: left;
   max-width: 230px;
   color: #666666;
+  margin-left: 4px;
 }
 
-.koolearn-membership .member .tab-cont2 .big .detail-price .original {
-  line-height: 30px;
+.koolearn-membership .member .tab-cont2 .vip-price .detail-price .original {
+  line-height: 16px;
   color: #888888;
   text-decoration: line-through;
+  margin-top: 12px;
+  margin-bottom: 2px;
 }
 
-.koolearn-membership .member .tab-cont2 .big .current {
+.koolearn-membership .member .tab-cont2 .vip-price .current {
   float: left;
   font-family: MicrosoftYaHei-Bold;
   font-weight: bold;
@@ -810,7 +832,7 @@ li {
   color: #ec5148;
 }
 
-.koolearn-membership .member .tab-cont2 .big .item-btn {
+.koolearn-membership .member .tab-cont2 .vip-price .item-btn {
   width: 90px;
   height: 28px;
   text-align: center;
@@ -821,7 +843,7 @@ li {
   float: right;
 }
 
-.koolearn-membership .member .tab-cont2 .big:hover {
+.koolearn-membership .member .tab-cont2 .vip-price:hover {
   -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
@@ -884,7 +906,6 @@ li {
   width: 932px;
   font-size: 14px;
   line-height: 24px;
-  letter-spacing: 1px;
   color: #666666;
 }
 
@@ -979,7 +1000,7 @@ li {
 
 .chinaan-banner .chinaan_member .tab-head {
   margin-right: -13px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .chinaan-banner .chinaan_member .tab-head .head-item {
@@ -1005,15 +1026,15 @@ li {
 
 .chinaan-banner .chinaan_member .tab-head .head-item.active span {
   position: absolute;
-  bottom: -12px;
+  bottom: -9px;
   left: 0;
   right: 0;
   margin: auto;
   width: 0;
   height: 0;
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-top: 12px solid #fba807;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 9px solid #fba807;
 }
 
 .chinaan-banner .chinaan_member .tab-cont {
@@ -1036,7 +1057,7 @@ li {
 }
 
 .chinaan-banner .chinaan_member .tab-cont .cont-item .item-detail {
-  padding-top: 8px;
+  padding-top: 10px;
   font-size: 16px;
   line-height: 24px;
   color: #444444;
@@ -1048,15 +1069,15 @@ li {
 }
 
 .chinaan-banner .chinaan_member .tab-cont .cont-item .cont-row {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   color: #666666;
-  line-height: 28px;
   text-align: center;
+  line-height: 28px;
 }
 
 .chinaan-banner .chinaan_member .tab-cont .cont-item .cont-row .original {
-  line-height: 30px;
-  color: #888888;
+  line-height: 24px;
+  color: #999999;
   float: right;
   text-decoration: line-through;
 }
